@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rtruvelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:19:54 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/06 15:19:57 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/09 09:56:18 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int white_space(char *str)
 {
     int count;

@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 16:32:51 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 10:35:53 by rtruvelo         ###   ########.fr       */
+/*   Created: 2023/11/09 12:43:33 by rtruvelo          #+#    #+#             */
+/*   Updated: 2023/11/09 12:44:40 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strdup(const char *source)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    size_t i;
-    size_t y;
-    char *pointer;
-
     
-    y = 0;
-    i = ft_strlen(source);
-    pointer = malloc(i * sizeof(char));
-    while (y < i)
-    {
-        pointer[y] = source[y];
-        y++;
-    }    
-    pointer[y] = '\0';
-    return (pointer);
 }
-
-// doute sur le resultat

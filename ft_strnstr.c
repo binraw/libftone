@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:55:12 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/08 17:23:00 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:17:27 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
 int main(void)
 {
 	const char police[] = "papier du vehicule";
-	const char pelo[] = "y";
-	printf("%s\n",ft_strnstr(police,pelo,3));
+	const char pelo[] = "p";
+	printf("%s\n",ft_strnstr(police,pelo,2));
 	//printf("%s\n",strnstr(police,pelo,8));
 }
