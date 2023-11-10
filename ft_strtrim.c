@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:19:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 15:35:20 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:33:27 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,12 @@ char *ft_strtrim(char const *s1, char const *set)
     end = ft_strlen(s1);
     i = 0;
     while(s1[start] != '\0' && ft_char_inset(s1[start], set))
-    start++;
+        start++;
     while(end > start && ft_char_inset(s1[end], set))
-    end--;
-    str = malloc(sizeof(*s1) * (end - start + 1));
+        end--;
+    str = malloc(sizeof(*s1) * (end - start) + 1);
     if (!str)
-    return (NULL);
+        return (NULL);
     while (start < end)
     {
         str[i] = s1[start];

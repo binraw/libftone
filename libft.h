@@ -4,11 +4,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-
-void *ft_bzero(void *s, size_t n);
-size_t     ft_strlen(const char *str);
 int white_space(char *str);
 int ft_atoi(char *str);
+void *ft_bzero(void *s, size_t n);
+size_t     ft_strlen(const char *str);
+
+
 void *ft_calloc(size_t num, size_t size);
 int ft_isalnum(int c);
 int ft_isalpha(int c);
@@ -34,6 +35,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int ft_strncmp(const char *str1, const char *str2, size_t n);
 char *ft_strnstr(const char *s1, const char *s2, size_t n);
 char *ft_strrchr(const char *string, int searchedChar);
+char *ft_strtrim(char const *s1, char const *set);
+int ft_char_inset(char c, char const *set);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 int	ft_tolower(int c);
 int    ft_toupper(int c);
