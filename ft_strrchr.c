@@ -6,23 +6,23 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:36:15 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 10:40:06 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:05:57 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(char *str)
-{
-    int i;
+// int ft_strlen(char *str)
+// {
+//     int i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
-}
+//     i = 0;
+//     while (str[i] != '\0')
+//     {
+//         i++;
+//     }
+//     return (i);
+// }
 
 char *ft_strrchr(const char *string, int searchedChar)
 {

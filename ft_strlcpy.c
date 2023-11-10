@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:13:08 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 10:39:57 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:59:20 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ size_t ft_strlcpy(char *s1, const char *s2, size_t n)
 	{
 		return (n);
 	}*/
-	return (ft_strlen(s1));
+	// return (ft_strlen(s1));
+	return (i);
 }
 
 

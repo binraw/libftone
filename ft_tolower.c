@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rtruvelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:23:27 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/06 15:23:29 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:45:23 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
-		c -= 32;
+		c += 32;
 	}
+	return (c);
 }

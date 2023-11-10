@@ -6,13 +6,13 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:32:51 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 16:30:28 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:12:59 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strdup(const char *source)
+char *ft_strdup(const char *source)
 {
     size_t i;
     size_t y;

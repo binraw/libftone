@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rtruvelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:23:35 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/06 15:23:37 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:45:30 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_toupper(int c)
+int    ft_toupper(int c)
 {
     if (c >= 97 && c <= 122)
     {
-        c += 32;
+        c -= 32;
     }
+    return (c);
 }

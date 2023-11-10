@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:19:54 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 09:56:18 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:25:45 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int white_space(char *str)
 
     count = 0;
     i = 0;
-    while (str[i] != '\0' && str[i] == ' ') 
+    while ( str[i] == ' ' || (str[i] >= 9 && str[i] <= 13) ) 
     {
         i++;
         count++;
@@ -37,6 +37,7 @@ int ft_atoi(char *str)
     if (str[i] == '-')
     {
         sign = -1;
+        i++;
     }
     else if (str[i] == '+')
     {
@@ -44,7 +45,14 @@ int ft_atoi(char *str)
     }
     while (str[i] != '\0' && str[i] >= 48 && str[i] <= 57)
     {
-        result = ((result * 10) + (str[i] - 48)) * sign;
+        result = ((result * 10) + (str[i] - 48));
+        i++;
     }
-    return (result);   
+    return (result * sign);   
 }
+
+// int main(void)
+// {
+//     char nu[] = "  -4323232";
+//     printf("%d\n", ft_atoi(nu));
+// }
