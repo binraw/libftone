@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rtruvelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:54:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/07 15:54:37 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:39:44 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,4 @@ char *ft_strchr(const char *string, int searchedChar)
     }
 
     return NULL;
-}
-int main() {
-    
- printf("%s\n", ft_strchr("hello",101));
-    return 0;
 }

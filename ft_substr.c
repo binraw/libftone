@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:55:00 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 10:35:09 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:40:12 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     
 }
 
-
-int main(void)
-{
-    char const couz[] = "Ohlecouz";
-    printf("%s\n", ft_substr(couz,1,6));
-}

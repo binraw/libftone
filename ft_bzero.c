@@ -6,13 +6,13 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 09:55:29 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 16:53:45 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:05:01 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void *ft_bzero(void *s, size_t n)
 {
 	unsigned char *p;
 	size_t i;
@@ -24,5 +24,5 @@ void ft_bzero(void *s, size_t n)
 		p[i] = 0;
 		i++;
 	}
-	return (s);
+	return (p);
 }

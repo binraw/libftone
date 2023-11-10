@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:12:00 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 14:02:10 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:39:38 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,4 @@ else
     write(fd,&number,1);  
     }
 }   
-}
-int main(void)
-{
-    int n;
-    
-    n = 1000000000;
-    ft_putnbr_fd(n,1);
-    
 }

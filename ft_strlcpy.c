@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:13:08 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 10:24:57 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:39:57 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,4 @@ size_t ft_strlcpy(char *s1, const char *s2, size_t n)
 	return (ft_strlen(s1));
 }
 
-int main(void)
-{
-	char un[5] = "trois";
-	char deux[6] = "quatre";
 
-	printf("%d\n", ft_strlcpy(un, deux, 6));
-	printf("%s\n", un);
-	//	printf("%d\n",strlcpy(un,deux,5));
-	return (0);
-}

@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:36:15 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/08 11:04:38 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:40:06 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,4 @@ char *ft_strrchr(const char *string, int searchedChar)
 
     return NULL;
 }
-int main()
-{
 
-    printf("%s\n", ft_strrchr("hellohy", 101));
-    return 0;
-}

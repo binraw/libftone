@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:53:37 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 16:53:38 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:06:11 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void *ft_calloc(size_t num, size_t size)
 {
 	void *pointer;
-    size_t i;
+    // size_t i;
 
-    i = 0;
+    // i = 0;
     
     pointer =  malloc(num* (sizeof(size)));
 

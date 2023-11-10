@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rtruvelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:01:04 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/07 12:37:48 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:39:23 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,4 @@ void *ft_memcpy(void *destination, const void *source, size_t size)
 	}
 	return (destination);
 }
-/*
-struct {
-  char name[40];
-  int age;
-} person, person_copy;*/
 
-int main ()
-{
-  char myname[] = "Pierre ta mere";
-	char name[30];
-	printf("%s\n",ft_memcpy(name,myname,sizeof(myname)));
- 
-
-  return 0;
-}

@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:37:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 12:28:28 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:39:51 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,3 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (dest);
 }
 
-int main(void)
-{
-	char const un[] = "trois";
-	char const  deux[] = "quatre";
-
-	printf("%s\n",ft_strjoin(un,deux));
-	return (0);
-}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rtruvelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:34:05 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/07 13:15:10 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:39:28 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,5 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	
 	return (dest);
 }
-int main ()
-{
-  char str[] = "memmove can be very useful......";
-  char src[] = "source";
-  //ft_memmove (str+20,str+15,11);
- // memmove (str+20,str+15,11);
-  //puts (str);
-  //printf("%s\n",memmove(str+15,str+15,4));
-  printf("%s\n",ft_memmove(str+15,str+15,4));
-  return 0;
-}
+
 		

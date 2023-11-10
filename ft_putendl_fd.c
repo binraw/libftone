@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:55:05 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/09 13:09:25 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:39:35 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,4 @@ void ft_putendl_fd(char *s, int fd)
     }
     write(fd,"\n",1);
 }
-int main(void)
-{
-    char lo[] = "le chien";
-    ft_putendl_fd(lo, 1);
-}
+
