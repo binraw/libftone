@@ -30,7 +30,8 @@ ft_strrchr.c \
 ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
-ft_toupper.c 
+ft_toupper.c \
+ft_itoa.c
 
 CFLAGS = -Wall -Wextra -Werror
 objets = $(sources:.c=.o)

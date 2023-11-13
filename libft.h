@@ -8,7 +8,9 @@ int white_space(const char *str);
 int ft_atoi(const char *str);
 void *ft_bzero(void *s, size_t n);
 size_t     ft_strlen(const char *str);
-
+int ft_int_len(int number);
+int ft_change_sign(int number);
+char *ft_itoa(int n);
 
 void *ft_calloc(size_t num, size_t size);
 int ft_isalnum(int c);
