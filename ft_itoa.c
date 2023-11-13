@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:30:31 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/13 15:36:38 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:46:22 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,7 @@
 
 // premiere fonction qui va compter la len
 // deux fonctions qui recup les nombre de chaque index (pos)(neg)
-// int ft_int_len(int number)
-// {
-//     int i;
-//     int y;
 
-//     i = 1;
-//     y = 1;
-//     if (number >= 10)
-//     {
-//         while(i < number)
-//         {
-//           i = i *10;
-//           y++;  
-//         }
-//         if ((i / number) > 1)
-//             y--;
-            
-//     }
-//     return (y);
-// }
 int ft_int_len(int number)
 {
     int y;
@@ -58,18 +39,37 @@ int ft_change_sign(int number)
     return (number);
 }
 
-char ft_add_pos_number(int len, int n, char str)
+char *ft_add_pos_number(int len, int n, char *str)
 {
-    
+      while(len)
+        {
+            str[len - 1] = (n % 10) + '0';
+            n = n / 10;
+            len--;
+        }   
+        return (str);
+}
+char *ft_add_nega_number(int len, int n, char *str)
+{
+    int i;
+
+    i = 0;
+    while(len)
+        {
+            str[len--] = (n % 10) + '0';
+            n = n / 10;
+            i++;
+        } 
+        str[0] = '-';
+        str[len + i + 1] = '\0';
+        return (str);
 }
 char *ft_itoa(int n)
 {
     char *str;
     int  len;
     int sign;
-    int i;
-
-    i = 0;
+   
     sign = 0;
     if (n < 0)
     {
@@ -84,26 +84,9 @@ char *ft_itoa(int n)
         return (NULL);
     str[len] = '\0';
     if (sign == 1)
-    {
-        while(len)
-        {
-            str[len--] = (n % 10) + '0';
-            n = n / 10;
-            i++;
-        } 
-        str[0] = '-';
-        str[len + i + 1] = '\0';
-   } 
+        return (ft_add_nega_number( len,  n, str));
    else 
-   {
-        while(len)
-        {
-            str[len - 1] = (n % 10) + '0';
-            n = n / 10;
-            len--;
-        }     
-   } 
-        return (str);
+    return (ft_add_pos_number( len, n, str));
 }
 // int main(void)
 // {
