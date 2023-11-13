@@ -6,12 +6,12 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:19:54 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 13:25:45 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/13 10:05:28 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int white_space(char *str)
+int white_space(const char *str)
 {
     int count;
     int i;
@@ -25,7 +25,7 @@ int white_space(char *str)
     }
     return (count);
 }
-int ft_atoi(char *str)
+int ft_atoi(const char *str)
 {
     int result;
     int sign;

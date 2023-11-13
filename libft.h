@@ -4,8 +4,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int white_space(char *str);
-int ft_atoi(char *str);
+int white_space(const char *str);
+int ft_atoi(const char *str);
 void *ft_bzero(void *s, size_t n);
 size_t     ft_strlen(const char *str);
 

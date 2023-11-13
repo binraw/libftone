@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:43:33 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 12:38:03 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/13 10:08:20 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     size_t i;
     
     i = 0;
-    str = (char) ft_strdup(s);
+    str =  ft_strdup(s);
     if (!str)
         return (NULL);
     while (str[i])

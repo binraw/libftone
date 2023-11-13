@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:34:05 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 10:39:28 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/13 10:17:18 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char *temp;
 	size_t i;
 	size_t y;
-	
+	if (!dest || !src)
+		return (NULL);
 	destination = dest;
 	temp = src;
 	source = src;
