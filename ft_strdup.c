@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:32:51 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 12:12:59 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:42:21 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char *ft_strdup(const char *source)
     y = 0;
     i = ft_strlen(source) + 1;
     pointer = malloc(i * sizeof(char));
+    if(!pointer)
+        return (NULL);
     while (y < i)
     {
         pointer[y] = source[y];
