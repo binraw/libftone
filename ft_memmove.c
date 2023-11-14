@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:34:05 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/13 10:17:18 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/14 14:23:35 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 		i++;
 	}
 //	destination[i] = temp[y];
-	
-	
 	return (dest);
 }
 

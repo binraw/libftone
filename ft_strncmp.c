@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:59:43 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/13 17:00:43 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/14 14:25:23 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,14 @@ int ft_strncmp(const char *str1, const char *str2, size_t n)
     {
         if (str1[i] != str2[i])
         {
-         
             return (str1[i] - str2[i]);
         }
-      
         i++;
     }
     if (i < n)
     {
-        return ((unsigned char)str1[i] - (unsigned char)str2[i]);
-        
-    }
-         
-        
+        return ((unsigned char)str1[i] - (unsigned char)str2[i]);  
+    }    
     return (0);
 
 }

@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:37:04 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 11:28:00 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/14 14:24:58 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,13 @@ size_t ft_strlcat(char *dest, const char *src, size_t size)
     size_t y;
 
     i = 0;
-
 	i = ft_strlen(dest);
     y = 0;
-	while (src[y] != '\0' && y < size)
+	while(src[y] != '\0' && y < size)
 	{
 		dest[i] = src[y];
 		i++;
-        y++;
-        
+        y++;   
 	}
 	dest[i] = '\0';
 	return (i);

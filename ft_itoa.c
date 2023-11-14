@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:30:31 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/13 15:46:22 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/14 14:22:40 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,14 @@ char *ft_add_nega_number(int len, int n, char *str)
 
     i = 0;
     while(len)
-        {
-            str[len--] = (n % 10) + '0';
-            n = n / 10;
-            i++;
-        } 
-        str[0] = '-';
-        str[len + i + 1] = '\0';
-        return (str);
+    {
+        str[len--] = (n % 10) + '0';
+        n = n / 10;
+        i++;
+    } 
+    str[0] = '-';
+    str[len + i + 1] = '\0';
+    return (str);
 }
 char *ft_itoa(int n)
 {
@@ -71,7 +71,7 @@ char *ft_itoa(int n)
     int sign;
    
     sign = 0;
-    if (n < 0)
+    if(n < 0)
     {
         if (n == -2147483648)
             return (ft_strdup("-2147483648"));
@@ -80,10 +80,10 @@ char *ft_itoa(int n)
     }
     len = ft_int_len(n);
     str = malloc((len + 1 + sign) * sizeof(char));
-    if (!str)
+    if(!str)
         return (NULL);
     str[len] = '\0';
-    if (sign == 1)
+    if(sign == 1)
         return (ft_add_nega_number( len,  n, str));
    else 
     return (ft_add_pos_number( len, n, str));
