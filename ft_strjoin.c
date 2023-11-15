@@ -6,40 +6,40 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:37:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 14:24:43 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/15 21:37:06 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
  
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    size_t i;
-    size_t y;
-    size_t x;
-    char *dest;
+	size_t	i;
+	size_t	y;
+	size_t	x;
+	char	*dest;
 
-    i = ft_strlen(s1) + ft_strlen(s2)+ 1;
-    x = 0;
-    y = 0;
-    dest = malloc(sizeof(char) * i);
-    if(!dest)
-        return (NULL);
-    while(s1[y] != '\0')
+	i = ft_strlen(s1) + ft_strlen(s2)+ 1;
+	x = 0;
+	y = 0;
+	dest = malloc(sizeof(char) * i);
+	if (!dest)
+		return (NULL);
+	while(s1[y] != '\0')
 	{
 		dest[x] = s1[y];
 		x++;
-        y++;   
+		y++;   
 	}
-    y = 0;
-    while(s2[y] != '\0')
-    {
-        dest[x] = s2[y];
-        x++;
-        y++;
-    }
+	y = 0;
+	while (s2[y] != '\0')
+	{
+		dest[x] = s2[y];
+		x++;
+		y++;
+	}
 	dest[x] = '\0';
-    return (dest);
+	return (dest);
 }
 
