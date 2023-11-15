@@ -6,21 +6,38 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:55:00 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 16:04:18 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:46:00 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+char *ft_reboot_start(void)
+{
+	char *reboot;
 
+	reboot = malloc(sizeof(char));
+	if (reboot == 0)
+	{
+		return (NULL);
+	}
+	reboot[0] = '\0';
+	return (reboot);
+}
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*pointer;
 	size_t	i;
-    // unsigned int i;
+
+	
     if (start > ft_strlen(s))
-		len = 0;
+		return (ft_reboot_start());
+		
+	else if ((ft_strlen(s) - start) < len )
+		len = ft_strlen(s) - start;
 	pointer = malloc((len + 1) * sizeof(char));
 	if (!pointer)
+		return (NULL);
+	if (pointer == 0)
 		return (NULL);
 	i = 0;
 	while (s[start] != '\0' && i < len)
@@ -30,6 +47,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 	}
 	pointer[i] = '\0';
+	
 	return(pointer);
 }
 // int main(void)

@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:15:21 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 15:25:36 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:59:47 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,9 @@ char **ft_split(char const *s, char c)
      }
      count++;
     }
-    str = malloc((count + 1) * sizeof(char *));
+    if(count == 0)
+      return (NULL);
+    str = malloc((count) * sizeof(char *));
     if (!str)
         return (NULL);
     i = 0;
