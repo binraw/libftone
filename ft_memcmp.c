@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:54:00 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 14:23:16 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:54:05 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int ft_memcmp(const void * pointer1, const void * pointer2, size_t size)
 {
     size_t i;
-	char *str1;
-	char *str2;
+	unsigned char *str1;
+	unsigned char *str2;
 
     i = 0;
-	str1 = (char *) pointer1;
-	str2 = (char *) pointer2;
-    while ((str1[i] != '\0' || str2[i] != '\0') && i < size)
+	str1 = (unsigned char *) pointer1;
+	str2 = (unsigned char *) pointer2;
+    while (i < size)
     {
         if(str1[i] > str2[i])
         {

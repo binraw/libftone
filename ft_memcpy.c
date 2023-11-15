@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:01:04 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 10:39:23 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:07:28 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void *ft_memcpy(void *destination, const void *source, size_t size)
 	const unsigned char *src;
 	size_t i;
 
+	if (!destination && !source)
+		return (NULL);
 	dest = destination;
 	src = source;
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:34:05 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 14:23:35 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:38:26 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,39 @@
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char *destination;
-	const unsigned char *source;
-	const unsigned char *temp;
-	size_t i;
-	size_t y;
-	if (!dest || !src)
-		return (NULL);
-	destination = dest;
-	temp = src;
-	source = src;
-	i = 0;
-	while (i < n)
+	unsigned char *source;
+	 
+	 if(dest == src || n == 0)
+	 	return (dest);
+	
+	if (dest < src)
 	{
-		destination[i] = source[i];
-		i++;
+		destination = (unsigned char*)dest;
+		source = (unsigned char*)src;
+		while(n--)
+			*destination++ = *source++;
 	}
-	y = 0;
-	while (y < n)
+	else
 	{
-		destination[i] = temp[y];
-		y++;
-		i++;
+		destination = (unsigned char*)dest + (n-1);
+		source = (unsigned char*)src + (n-1);
+		while(n--)
+			*destination-- = *source--;
 	}
+	
+	// i = 0;
+	// while (i < n)
+	// {
+	// 	destination[i] = source[i];
+	// 	i++;
+	// }
+	// y = 0;
+	// while (y < n)
+	// {
+	// 	destination[i] = temp[y];
+	// 	y++;
+	// 	i++;
+	// }
 //	destination[i] = temp[y];
 	return (dest);
 }
