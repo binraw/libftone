@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:19:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/15 12:11:55 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:48:11 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,28 @@ char *ft_strtrim(char const *s1, char const *set)
     int start;
     int end;
     int i;
+    char *empty;
     
-
+     if (!s1 || !set)
+         return (NULL);
     start = 0;
     end = ft_strlen(s1);
+    
+    if(start >= end)
+    {
+        empty = malloc(sizeof(char) * (start + 1));
+    if (!empty)
+        return (NULL);
+    
+     empty[0] = '\0';
+        return (empty);
+    }
     i = 0;
-    while(s1[start] != '\0' && ft_char_inset(s1[start], set))
+    while((s1[start] != '\0' && ft_char_inset(s1[start], set)))
         start++;
-    while(end  > start && ft_char_inset(s1[end], set) && s1[end])
+    while((end  > start && ft_char_inset(s1[end - 1], set)))
         end--;
-    str = malloc(sizeof(*s1) * (end - start) + 1);
+    str = malloc(sizeof(char) * (end - start + 1));
     if (!str)
         return (NULL);
     while (start < end)
@@ -50,7 +62,14 @@ char *ft_strtrim(char const *s1, char const *set)
         i++;
         start++;
     }
-    str[i] = '\0';
+     str[i] = '\0';
    
     return (str);
 }
+
+// int main(void)
+// {
+//     char *s1 = "";
+//  	char *s2 = "";
+//     printf("%s\n", ft_strtrim(s1,""));
+// }
