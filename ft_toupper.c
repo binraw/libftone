@@ -6,15 +6,15 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:23:35 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/10 12:45:30 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:32:00 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-    {
-        c -= 32;
-    }
-    return (c);
+	if (c >= 97 && c <= 122)
+	{
+		c -= 32;
+	}
+	return (c);
 }

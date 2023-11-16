@@ -6,45 +6,27 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:13:08 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 14:25:06 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:04:18 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// size_t ft_strlen(const char *str)
-// {
-// 	size_t i;
 
-// 	i = 0;
-// 	while (str[i] != '\0')
-// 	{
-// 		i++;
-// 	}
-// 	return (i);
-// }
-
-size_t ft_strlcpy(char *s1, const char *s2, size_t n)
+size_t	ft_strlcpy(char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (n > 0)
 	{
-	while (s2[i] != '\0' && i < (n - 1))
-	{
-		s1[i] = s2[i];
-		i++;
+		while (s2[i] != '\0' && i < (n - 1))
+		{
+			s1[i] = s2[i];
+			i++;
+		}
+		s1[i] = 0;
 	}
-	s1[i] = 0;
-	}
-	/*if (ft_strlen(s2) > n)
-	{
-		return (n);
-	}*/
-	// return (ft_strlen(s1));
 	while (s2[i] != '\0')
-		i++;	
+		i++;
 	return (i);
 }
-
-

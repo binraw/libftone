@@ -6,14 +6,15 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:55:00 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/15 11:46:00 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:31:12 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_reboot_start(void)
+
+char	*ft_reboot_start(void)
 {
-	char *reboot;
+	char	*reboot;
 
 	reboot = malloc(sizeof(char));
 	if (reboot == 0)
@@ -23,16 +24,15 @@ char *ft_reboot_start(void)
 	reboot[0] = '\0';
 	return (reboot);
 }
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*pointer;
 	size_t	i;
 
-	
-    if (start > ft_strlen(s))
+	if (start > ft_strlen(s))
 		return (ft_reboot_start());
-		
-	else if ((ft_strlen(s) - start) < len )
+	else if ((ft_strlen(s) - start) < len)
 		len = ft_strlen(s) - start;
 	pointer = malloc((len + 1) * sizeof(char));
 	if (!pointer)
@@ -47,12 +47,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 	}
 	pointer[i] = '\0';
-	
-	return(pointer);
+	return (pointer);
 }
 // int main(void)
 // {
 //     char const s[] = "";
 //     printf("%s\n", ft_substr(s,1,1));
 // }
-

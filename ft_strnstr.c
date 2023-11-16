@@ -6,19 +6,18 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:55:12 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 15:40:39 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:10:04 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	char *str1;
-	char *str2;
-
-	size_t i;
-	size_t y;
+	char	*str1;
+	char	*str2;
+	size_t	i;
+	size_t	y;
 
 	str1 = (char *) s1;
 	str2 = (char *) s2;
@@ -26,7 +25,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
 	y = 0;
 	if (s2[i] == '\0')
 		return (str1);
-	while (str1[i] != '\0' && i < n )
+	while (str1[i] != '\0' && i < n)
 	{
 		while ((str1[i + y] == str2[y]) && str1[i + y] != '\0' && i + y < n)
 			y++;
@@ -42,8 +41,5 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
 
 // int main(void)
 // {
-	
 // 	printf("%s\n", ft_strnstr("MZIRIBMZIRIBMZE123", "MZIRIBMZE", 9));
 // }
-
-
