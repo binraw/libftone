@@ -6,16 +6,17 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:54:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/15 21:34:10 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:53:54 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strchr(const char *string, int searchedChar)
 {
 	int		i;
-	char 	*p;
-	char 	search;
+	char	*p;
+	char	search;
 
 	i = 0;
 	p = (char *)string;

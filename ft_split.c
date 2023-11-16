@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:15:21 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/15 20:58:08 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:52:31 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,11 @@ int    ft_search(const char *s, char c, int start)
     int i;
 
     i = start;
-    while(s[i] != '\0')
-    {
         if (s[i] == c)
             {
                 return (1);
             }
             i++;
-    }
     return (0);
 }
 
@@ -56,21 +53,18 @@ char **ft_split(char const *s, char c)
     while(s[i] != '\0' &&  (ft_search(s,c,i) != 1))
       {
         i++;
+		// increment y pour capter si je dois count++
+		y++;
       }
-      // if(s[i - 1] != (ft_search(s,c,i) != 0))
-      //  { 
-      //   count--;
-      //  }
+	   if(y!=0)
+      count++;
     while( s[i] != '\0' && (ft_search(s, c, i) == 1))
      {   
         i++;
      }
-     count++; 
+     
     }
-    if(count == 0)
-    {
-      return (NULL);
-    }
+	y = 0;
       i = 0;
     str = ft_calloc((count + 1) , sizeof(char *));
   
@@ -79,11 +73,12 @@ char **ft_split(char const *s, char c)
     
     while(count > i)
     {
-    while( s[start] && ft_search(s,c,y) != 0)
+    while( s[start] && (ft_search(s,c,start) == 1))
        {
          start++;
        }
-     while(s[y] && ft_search(s,c,y) != 1)
+	y = start;
+     while(s[y] && (ft_search(s,c,y) != 1))
      {
       y++;
      }
@@ -99,10 +94,10 @@ char **ft_split(char const *s, char c)
     return (str);   
 }
 
-int main(void)
-{
-    const char bol[] = "Legrosbol";
-    char c = 'g';
-    // printf("%s\n", ft_split(bol,c));
-    ft_split(bol,c);
-}
+// int main(void)
+// {
+//     const char bol[] = " split this for   me  !       ";
+//     char c = ' ';
+//     // printf("%s\n", ft_split(bol,c));
+//     ft_split(bol,c);
+// }
