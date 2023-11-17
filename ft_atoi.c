@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:19:54 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 14:46:33 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:19:38 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,32 +29,34 @@ int	white_space(const char *str)
 
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	sign;
-	int	i;
+	long long int	result;
+	long long int	resultcpy;
+	int				sign;
+	int				i;
 
 	result = 0;
 	sign = 1;
 	i = 0 + white_space(str);
 	if (str[i] == '-')
-	{
 		sign = -1;
+	if (str[i] == '+' || str[i] == '-')
 		i++;
-	}
-	else if (str[i] == '+')
-	{
-		i++;
-	}
 	while (str[i] != '\0' && str[i] >= 48 && str[i] <= 57)
 	{
-		result = ((result * 10) + (str[i] - 48));
+		resultcpy = result;
+		result = ((result * 10) + (str[i] - 48) * sign);
+		if (result < resultcpy && sign == 1)
+			return (-1);
+		if (result > resultcpy && sign == -1)
+			return (0);
 		i++;
 	}
-	return (result * sign);
+	return ((int)result);
 }
 
 // int main(void)
 // {
-//     char nu[] = "  -4323232";
+//     char nu[] = "    -888888888888228789232";
 //     printf("%d\n", ft_atoi(nu));
+// 	printf("%d\n", atoi(nu));
 // }
