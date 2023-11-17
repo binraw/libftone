@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:30:31 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/15 21:18:34 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:48:15 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // premiere fonction qui va compter la len
 // deux fonctions qui recup les nombre de chaque index (pos)(neg)
 
-int	ft_int_len(int number)
+static int	ft_int_len(int number)
 {
 	int	y;
 
@@ -33,13 +33,13 @@ int	ft_int_len(int number)
 	return (y);
 }
 
-int	ft_change_sign(int number)
-{
-	number *= -1;
-	return (number);
-}
+// static int	ft_change_sign(int number)
+// {
+// 	number *= -1;
+// 	return (number);
+// }
 
-char	*ft_add_pos_number(int len, int n, char *str)
+static char	*ft_add_pos_number(int len, int n, char *str)
 {
 	while (len)
 	{
@@ -50,7 +50,7 @@ char	*ft_add_pos_number(int len, int n, char *str)
 	return (str);
 }
 
-char	*ft_add_nega_number(int len, int n, char *str)
+static char	*ft_add_nega_number(int len, int n, char *str)
 {
 	int	i;
 

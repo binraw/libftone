@@ -6,13 +6,13 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:55:00 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/16 14:31:12 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:44:45 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_reboot_start(void)
+static char	*ft_reboot_start(void)
 {
 	char	*reboot;
 

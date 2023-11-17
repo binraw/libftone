@@ -1,5 +1,5 @@
 CC = gcc
-sources =ft_atoi.c \
+SOURCES =ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
 ft_isalnum.c \
@@ -32,25 +32,34 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
 ft_itoa.c \
-ft_split.c \
-ft_lstnew
+ft_split.c 
+
+BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c
+
 
 CFLAGS = -Wall -Wextra -Werror
-objets = $(sources:.c=.o)
+OBJ = $(SOURCES:.c=.o)
+OBJ_BONUS = $(BONUS:.c=.o)
+OBJ_ALL = $(OBJ) $(OBJ_BONUS)
 NAME = libft.a
 
+.c.o:
+		$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 
-$(NAME): $(objets)
-		ar -rcs $(NAME) $(objets)
+$(NAME): $(OBJ)
+		ar -rcs $(NAME) $(OBJ)
+
+bonus: $(OBJ_ALL)
+		ar -rcs $(NAME) $(OBJ_ALL)
 clean:
-		rm -f $(objets)
+		rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 		rm -f $(NAME)
 
 re: fclean $(NAME)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

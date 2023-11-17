@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 14:45:14 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/17 13:47:02 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:51:22 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ typedef struct 		s_list
 {
 	void 			*content;	
 	struct s_list 	*next;
-}					t_list;
+}	t_list;
 
-int		white_space(const	char	*str);
+
 int		ft_atoi(const char	*str);
 void	*ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *str);
-int		ft_int_len(int number);
-int		ft_change_sign(int number);
+
+
 char	*ft_itoa(int n);
 void	*ft_calloc(size_t num, size_t size);
 int		ft_isalnum(int c);
@@ -56,10 +56,11 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *string, int searchedChar);
 char	*ft_strtrim(char const *s1, char const *set);
-int		ft_char_inset(char c, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+int ft_lstsize(t_list *lst);
 #endif

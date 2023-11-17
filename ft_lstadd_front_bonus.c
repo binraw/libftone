@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 12:58:26 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/17 13:02:23 by rtruvelo         ###   ########.fr       */
+/*   Created: 2023/11/17 14:52:14 by rtruvelo          #+#    #+#             */
+/*   Updated: 2023/11/17 15:08:07 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_lstsize(t_list *lst)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	if(!lst)
-		return (NULL);
-	while (lst != NULL)
-	{
-		lst = lst ->next;
-		i++;
-	}
-	return (i);
+void ft_lstadd_front(t_list **lst, t_list *new)
+{
+    t_list  *element;
+    
+    element = ft_lstnew(new);
+    element->content = element;
+    //rajouter la fonction de calcul de taille pour savoir si return null ou pas
+    element->next = *lst;
+    // return (element);
 }

@@ -6,13 +6,13 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:15:21 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/16 16:48:38 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:44:03 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_malloc(char **str, int index)
+static void	ft_free_malloc(char **str, int index)
 {
 	while (index >= 0)
 	{
@@ -22,7 +22,7 @@ void	ft_free_malloc(char **str, int index)
 	free(str);
 }
 
-int	ft_search(const char *s, char c, int start)
+static int	ft_search(const char *s, char c, int start)
 {
 	int	i;
 
@@ -34,7 +34,7 @@ int	ft_search(const char *s, char c, int start)
 	return (0);
 }
 
-int	ft_count_words(char const *s, int i, int count, char c)
+static int	ft_count_words(char const *s, int i, int count, char c)
 {
 	int	y;
 
@@ -54,7 +54,7 @@ int	ft_count_words(char const *s, int i, int count, char c)
 	return (count);
 }
 
-int	ft_count_letters(unsigned int start, char const *s, char c)
+static int	ft_count_letters(unsigned int start, char const *s, char c)
 {
 	while (s[start] && (ft_search(s, c, start) != 1))
 		start++;

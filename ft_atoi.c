@@ -6,13 +6,13 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:19:54 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/17 11:19:38 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:42:40 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	white_space(const char *str)
+static int	white_space(const char *str)
 {
 	int		count;
 	int		i;
