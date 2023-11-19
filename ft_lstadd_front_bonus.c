@@ -14,11 +14,9 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-    t_list  *element;
-    
-    element = ft_lstnew(new);
-    element->content = element;
-    //rajouter la fonction de calcul de taille pour savoir si return null ou pas
-    element->next = *lst;
-    // return (element);
+ if (new == NULL || lst == NULL)
+        return (NULL);
+
+    new->next = *lst;
+    *lst = new;
 }
