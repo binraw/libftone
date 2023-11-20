@@ -6,14 +6,11 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:30:31 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/17 15:48:15 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:48:42 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// premiere fonction qui va compter la len
-// deux fonctions qui recup les nombre de chaque index (pos)(neg)
 
 static int	ft_int_len(int number)
 {
@@ -32,12 +29,6 @@ static int	ft_int_len(int number)
 		y++;
 	return (y);
 }
-
-// static int	ft_change_sign(int number)
-// {
-// 	number *= -1;
-// 	return (number);
-// }
 
 static char	*ft_add_pos_number(int len, int n, char *str)
 {

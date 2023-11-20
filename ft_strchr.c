@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:54:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/16 13:53:54 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/20 13:29:50 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ char	*ft_strchr(const char *string, int searchedChar)
 // {
 //     const char ba[] = "teste";
 
-//     printf("%s\n", ft_strchr(ba, '\0'));
+//     printf("%s\n", ft_strchr(ba, 'e'));
 // }

@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:15:21 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/17 15:44:03 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:55:30 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str);
 }
-//remplace *s par start
+
 // int main(void)
 // {
 //     const char bol[] = " split this for   me  !       ";

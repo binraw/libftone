@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:53:29 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/15 21:21:06 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:52:50 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,3 @@ void	*ft_memchr(const void *ptr, int ch, size_t count)
 	}
 	return (NULL);
 }
-// int main(void)
-// {
-//     const void *s; 
-// printf("%d\n",ft_memchr(s, 2 + 256, 3) == s + 2); 
-// }

@@ -44,8 +44,8 @@ OBJ_BONUS = $(BONUS:.c=.o)
 OBJ_ALL = $(OBJ) $(OBJ_BONUS)
 NAME = libft.a
 
-.c.o:
-		$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.c libft.h
+		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
 
