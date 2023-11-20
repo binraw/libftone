@@ -38,6 +38,7 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstadd_b
 
 
 CFLAGS = -Wall -Wextra -Werror
+LIB= libft.h
 OBJ = $(SOURCES:.c=.o)
 OBJ_BONUS = $(BONUS:.c=.o)
 OBJ_ALL = $(OBJ) $(OBJ_BONUS)
@@ -49,10 +50,10 @@ NAME = libft.a
 all: $(NAME)
 
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(LIB)
 		ar -rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ_ALL)
+bonus: $(OBJ_ALL) $(LIB)
 		ar -rcs $(NAME) $(OBJ_ALL)
 clean:
 		rm -f $(OBJ) $(OBJ_BONUS)

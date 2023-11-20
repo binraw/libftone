@@ -6,18 +6,18 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 12:58:26 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/17 15:53:22 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/20 11:11:41 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 
 	i = 0;
-	if(!lst)
+	if (!lst)
 		return (0);
 	while (lst != NULL)
 	{
