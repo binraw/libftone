@@ -1,17 +1,27 @@
-#include 'libft.h'
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/20 09:43:27 by rtruvelo          #+#    #+#             */
+/*   Updated: 2023/11/20 10:05:05 by rtruvelo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *element;
 	t_list *last;
 
-    element = ft_lstnew(new);
-    if(!element)
-		return (NULL);
+    if(!new)
+		return;
 	if (*lst == NULL)
-		*lst = element;
+		*lst = new;
 	else
 		{
 			last = ft_lstlast(*lst);
-			last->next = element;
+			last->next = new;
 		}
 }
