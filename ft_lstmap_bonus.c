@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 10:05:55 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/20 13:34:09 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:17:18 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*temp;
 
 	current = lst;
-	if (lst == NULL || f == NULL)
+	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
 	newlst = NULL;
 	while (current != NULL)

@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:53:37 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/14 14:54:04 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:05:25 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,8 @@ void	*ft_calloc(size_t num, size_t size)
 	}
 	return (pointer);
 }
+
+// int main(void)
+// {
+// 	ft_calloc(2147483647,2);
+// }
