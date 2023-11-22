@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:54:34 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/20 13:29:50 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:05:38 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *string, int searchedChar)
 {
-	int		i;
+	size_t	i;
 	char	*p;
 	char	search;
 

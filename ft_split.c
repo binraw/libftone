@@ -6,26 +6,47 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:15:21 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/21 13:24:05 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:42:06 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_free_malloc(char **str, int index)
+static size_t	ft_count_words(char const *s, size_t i, size_t count, char c);
+static size_t	ft_count_letters(size_t start, char const *s, char c);
+static void		*ft_free_malloc(char **str, size_t index);
+
+char	**ft_split(char const *s, char c)
 {
-	while (index >= 0)
+	char			**str;
+	size_t			i;
+	size_t			count;
+	size_t			start;
+
+	if (s == NULL)
+		return (NULL);
+	start = 0;
+	i = 0;
+	count = ft_count_words(s, i, 0, c);
+	str = ft_calloc((count + 1), sizeof(char *));
+	if (!str)
+		return (NULL);
+	while (count > i)
 	{
-		free(str[index]);
-		index--;
+		while (s[start] && (s[start] == c))
+			start++;
+		str[i] = ft_substr(s, start, ((ft_count_letters(start, s, c)) - start));
+		if (str[i] == NULL)
+			return (ft_free_malloc(str, i));
+		start = ft_count_letters(start, s, c);
+		i++;
 	}
-	free(str);
-	return (NULL);
+	return (str);
 }
 
-static int	ft_count_words(char const *s, int i, int count, char c)
+static size_t	ft_count_words(char const *s, size_t i, size_t count, char c)
 {
-	int	y;
+	size_t	y;
 
 	y = 0;
 	while (s[i] != '\0')
@@ -43,48 +64,31 @@ static int	ft_count_words(char const *s, int i, int count, char c)
 	return (count);
 }
 
-static int	ft_count_letters(unsigned int start, char const *s, char c)
+static size_t	ft_count_letters(size_t start, char const *s, char c)
 {
 	while (s[start] && (s[start] != c))
 		start++;
 	return (start);
 }
 
-char	**ft_split(char const *s, char c)
+static void	*ft_free_malloc(char **str, size_t index)
 {
-	char			**str;
-	int				i;
-	int				count;
-	unsigned int	start;
+	size_t	i;
 
-	if (s == NULL)
-		return (NULL);
-	start = 0;
 	i = 0;
-	count = ft_count_words(s, i, 0, c);
-	str = ft_calloc((count + 1), sizeof(char *));
-	if (!str)
-		return (NULL);
-	while (count > i)
+	while (index > i)
 	{
-		while (s[start] && (s[start] == c))
-			start++;
-		str[i] = ft_substr(s, start, ((ft_count_letters(start, s, c)) - start));
-		if (str[i] == NULL)
-			return (ft_free_malloc(str, i - 1));
-		start = ft_count_letters(start, s, c);
+		free(str[i]);
 		i++;
 	}
-	return (str);
+	free(str);
+	return (NULL);
 }
-// #include "stdio.h"
-// int main(void)
-// {
-//     // const char *bol = NULL;
-// 	// char c = ' ';
 
-//     char **str = ft_split("lolol", ' ');
-// 	if (!str)
-// 		write(1,"ok",2);
-//     // ft_split(bol,c);
+// int main()
+// {
+// 	char *str = malloc(2147483650);
+// 	memset(str, 'A', 2147483650);
+// 	str[2147483649] = '\0';
+// 	ft_split(str, 'b');
 // }

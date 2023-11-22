@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:36:15 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/16 14:11:50 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/22 16:38:24 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strrchr(const char *string, int searchedChar)
 		{
 			return (&p[i]);
 		}
+		if (i == 0)
+			return (NULL);
 		i--;
 	}
 	return (NULL);

@@ -1,4 +1,3 @@
-CC = gcc
 SOURCES =ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
@@ -51,15 +50,15 @@ all: $(NAME)
 
 
 $(NAME): $(OBJ) $(LIB)
-		ar -rcs $(NAME) $(OBJ)
+		$(AR) -rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ_ALL) $(LIB)
-		ar -rcs $(NAME) $(OBJ_ALL)
+bonus:
+	$(MAKE) $(NAME) SOURCES="$(SOURCES) $(BONUS)"
 clean:
-		rm -f $(OBJ) $(OBJ_BONUS)
+		$(RM) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
-		rm -f $(NAME)
+		$(RM) $(NAME)
 
 re: fclean $(NAME)
 
