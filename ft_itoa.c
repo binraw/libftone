@@ -6,7 +6,7 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:30:31 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/23 09:58:05 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/23 13:54:13 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char	*ft_itoa(int n)
 	str = malloc((len + 1 + sign) * sizeof(char));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
+	str[len + sign] = '\0';
 	if (sign == 1)
 		return (ft_add_nega_number(len, n, str));
 	else
