@@ -6,15 +6,15 @@
 /*   By: rtruvelo <rtruvelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:30:31 by rtruvelo          #+#    #+#             */
-/*   Updated: 2023/11/20 12:48:42 by rtruvelo         ###   ########.fr       */
+/*   Updated: 2023/11/23 09:58:05 by rtruvelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_int_len(int number)
+static size_t	ft_int_len(int number)
 {
-	int	y;
+	size_t	y;
 
 	y = 0;
 	if (number != 0)
@@ -30,24 +30,28 @@ static int	ft_int_len(int number)
 	return (y);
 }
 
-static char	*ft_add_pos_number(int len, int n, char *str)
+static char	*ft_add_pos_number(size_t len, int n, char *str)
 {
 	while (len)
 	{
 		str[len - 1] = (n % 10) + '0';
 		n = n / 10;
+		if (len == 0)
+			return (str);
 		len--;
 	}
 	return (str);
 }
 
-static char	*ft_add_nega_number(int len, int n, char *str)
+static char	*ft_add_nega_number(size_t len, int n, char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (len)
 	{
+		if (len == 0)
+			return (str);
 		str[len--] = (n % 10) + '0';
 		n = n / 10;
 		i++;
@@ -60,7 +64,7 @@ static char	*ft_add_nega_number(int len, int n, char *str)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		len;
+	size_t	len;
 	int		sign;
 
 	sign = 0;
